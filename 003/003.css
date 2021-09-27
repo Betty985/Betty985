@@ -1,0 +1,232 @@
+* {
+	margin:0;
+	padding:0;
+}
+/* 清除项目列表符号 */
+ul li {
+	display:block;
+	list-style-type:none;
+	width:300px;
+	height:50px;
+	border-radius:6px;
+	font-weight:bold;
+	font-family:'幼圆','Arial Narrow',Arial,sans-serif;
+}
+.nav li {
+	list-style-type:none;
+	/* display:block;
+	*/
+    float:left;
+	width:24%;
+	height:36px;
+	box-shadow:1px 1px 2px black;
+	line-height:26px;
+	text-align:center;
+	background-color:#FFCCCC;
+	border:3px #333333;
+	margin:1px;
+	/* 文本阴影 */
+    text-shadow:1px 0 1px #333;
+}
+a {
+	text-decoration:none;
+	color:Indigo;
+}
+a:hover {
+	opacity:0.6;
+	/* background-color:rgba(255,230,204,0.6) */
+}
+/* 属性选择器 */
+a[href$="docx"]::before {
+	content:url("https://pic3.zhimg.com/v2-4a57aa4d21daca2dbc8332f96de421ea_b.jpg");
+}
+a[href$="pdf"]::before {
+	content:url("https://pic1.zhimg.com/80/v2-b1aeb9d9daf8040d5cd1132582859362_720w.jpg?source=1940ef5c");
+}
+a[href$="html"]::before {
+	content:url("https://pic1.zhimg.com/80/v2-d69c748e11e2f030fedb0b84102da5e0_720w.jpg?source=1940ef5c");
+}
+/* 子元素伪类选择器 */
+/* 隔行换色 */
+ul li:nth-child(even) {
+	background-color:rgb(172,159,226);
+}
+ul li:nth-child(odd) {
+	background-color:rgb(159,226,223);
+}
+ul li:first-child {
+	background-color:rgb(179,232,245);
+}
+ul li:last-child {
+	background-color:rgb(226,159,220);
+}
+canvas {
+	background-color:black;
+	border:1px solid rgb(10,90,3);
+	box-shadow:10px 10px 10px rgba(36,58,2,0.3);
+}
+p:first-of-type {
+	color:#333333;
+}
+p:nth-of-type(even) {
+	background:linear-gradient(to right,#FFFFCC,#CCFFFF,#FFCCCC,#CCFFCC);
+	/* 单行文本截断 */
+    overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	font-size:18px;
+	font-family:Cursive,Courier,Serif;
+	margin-top:10px;
+	box-shadow:3px 3px 3px 2px #888;
+	cursor:pointer;
+}
+p:nth-of-type(even):hover{
+	/* 鼠标放上去显示全部内容 */
+	white-space:normal;
+}
+span:nth-of-type(1) {
+	color:blueviolet;
+}
+/* UI伪类选择器 */
+input:focus {
+	background-color:orange;
+}
+::selection {
+	background-color:#CC99CC;
+	color:beige
+}
+input:checked {
+	outline:4px solid green;
+}
+input:enabled {
+	box-shadow:2px 2px 2px rgb(89,89,230);
+}
+input:disabled {
+	box-shadow:1px 2px 2px MediumVioletRed;
+}
+input:read-write {
+	background-image:url("咕咚萌西.jpeg");
+	background-size:cover;
+	background-origin:content-box;
+	background-position:top;
+}
+input:read-only {
+	display:block;
+	width:100px;
+	visibility:hidden;
+	box-shadow:2px 2px 2px rgb(89,230,171);
+}
+:root {
+	background-color:LavenderBlush;
+}
+td:empty {
+	background-color:black;
+}
+a:target {
+	color:#996699;
+}
+a:not(.first) {
+	color:#003366;
+}
+img+p {
+	text-shadow:1px 0 0 #333,-1px 0 0 silver,0 1px 0 #333,0 -1px 0 silver;
+	font-size:12px;
+	float:right;
+	color:black;
+	visibility:hidden;
+	font-family:Cursive,serif;
+	transition:all 2s ease-in-out;
+}
+.txt:hover p{
+	background-color:rgba(245, 191, 191, 0.849);
+	visibility:visible;
+	border-radius:9px;
+	font-size:30px;
+}
+.txt div:last-child {
+	height:40px;
+	/* word-wrap:break-word;
+	*/
+    word-break:break-all;
+	margin-top:3px;
+}
+div[class^="egg"] {
+	float:left;
+	width:20%;
+	height:300px;
+	line-height:300px;
+	display:block;
+	/* background-color:black;
+	*/
+    border-radius:50%;
+	box-shadow:10px 10px 5px rgba(73,77,73,0.39);
+	text-align:center;
+	font-size:29px;
+	/* transition-property:all;
+	transition-duration:20s;
+	transition-timing-function:ease;
+	transition-delay:5s; */
+	transition:background 20s linear 3s;
+}
+/* css过渡 */
+div[class^="egg"]:hover{
+	background:-webkit-radial-gradient(center,#e3c5f3,#e6b7ba);
+	/* css变形——平移 */
+	transform:translate(0,0);
+	/* css变形——缩放 */
+	transform:scale(1,1);
+	/* css变形——旋转 */
+	transform:rotate(0 deg);
+	/* css变形——倾斜 */
+	transform:skew(0 deg,0 deg);
+	/* css变形——中心原点 */
+	transform-origin:5%,50%;
+	width:10px;
+	height:10px;
+}
+.egg1 {
+	border-radius:10px,20px;
+	background:-webkit-radial-gradient(center,ellipse closest-side,white,yellow,orangered);
+	box-shadow:#108310d7;
+	transform:skew(2deg,2deg);
+}
+.egg2 {
+	background:-webkit-radial-gradient(top,ellipse farthest-corner,white,rgb(0, 255, 34),rgb(93, 203, 223));
+	transform:scale(1.2,1.2);
+}
+.egg3 {
+	background:-webkit-radial-gradient(left,farthest-side,white,rgb(111, 0, 255),rgb(238, 41, 221));
+	transform:translate(2px,20px);
+}
+.egg4 {
+	background:-webkit-radial-gradient(center,circle,white,rgba(233, 178, 27, 0.932),rgb(240, 236, 26));
+	transform:scale(0.6,0.6);
+	transform:rotate(30deg);
+}
+.egg5 {
+	background:url(https://cs.vmovier.com/Uploads/post/2015-12-25/567cf6a1ac60e.jpg) round;
+	background-clip:text;
+	-webkit-background-clip:text;
+	color:transparent;
+	transform-origin:0% 0%;
+}
+.item {
+	width:50px;
+	line-height:50px;
+	border-radius:80% 90% 100% 20%;
+	background-color:#E61588;
+	font-size:30px;
+	text-align:center;
+	color:white;
+	display:inline-block;
+	box-shadow:8px 8px 8px 6px red；
+}
+/* 定义动画 */
+@keyframes mycolor{
+	0%{background-color:#CCFFCC;}
+	50%{background-color:#CCFFFF;}
+	100%{background-color:#e3c5f3;}
+}
+body {
+	animation:mycolor 3s linear 1s 3;
+}
