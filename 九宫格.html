@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- 文件必须用UTF-8编码 -->
+    <meta charset="utf-8">
+    <!-- width设置viewport的宽度，即iphone最初模拟PC浏览器的宽度，之后iphone会按这个宽度展现的页面同比缩放到iphone屏幕上。设置width=device-width后就不会再进行缩放了，因为宽度正好和iphone的宽度相同（前提是没有设置缩放比例）。
+        minimum-scale和maximum-scale是控制用户允许设置的缩放比例的。
+        user-scalable标识是否允许对页面进行缩放，取值有两个yes和no。设置为no则不允许进行页面缩放了。
+        initial-scale设置用户最初看到页面时的缩放比例。
+强调：在制作过程中andriod端硬件设备不一，需要另加一行代码 ：target-densitydpi=device-dpi。
+        target-densitydpi 可以设定的值
+        device-dpi 设备本身像素
+        high-dpi 用高像素，中低像素屏幕适当缩小
+        medium-dpi 中等像素，高的屏幕放大，低的变小是默认值
+        low-dpi 低像素，中高像素会适当变大 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>九宫格</title>
+    <!-- css使用外联的方式，放到<head></head>之间 -->
+    <link rel="stylesheet" type="text/css" href="九宫格.css">
+    </head>
+    <body>
+     <!-- css控制样式时不得使用id -->
+    <div class="main">
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+        <div class="l"></div>
+    </div>
+    </body>
+</html>

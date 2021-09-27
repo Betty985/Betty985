@@ -1,0 +1,21 @@
+* {
+    margin: 2px;
+    padding: 0%;
+}
+/* .main{
+    width:100vw;
+    height:100vw;
+    /* position:fixed;
+    top:2px;
+    left:35%;  */
+    /* overflow: auto; */
+    /* display:flex; */
+div .l{
+    background-color:rgb(255,166,0);
+    float:left;
+    width:30vw;
+    height:30vw;
+    border-radius:3vw; 
+    margin:1vw;
+    text-align: center;
+}
