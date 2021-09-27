@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>弹性盒子</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      @keyframes bc {
+        0% {
+          background-color: rgb(140, 216, 216);
+          width: 30%;
+        }
+        50% {
+          background-color: #fff;
+          width: 70%;
+        }
+        100% {
+          background-color: rgb(48, 212, 130);
+          width: 100%;
+        }
+      }
+      #one {
+        display: flex;
+        animation: bc 10s ease-in-out;
+        height: 10vw;
+        max-width: 50vw;
+        /* flex-flow */
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      #two {
+        flex: 1;
+        min-width: 200px;
+        background-color: rgb(163, 162, 162);
+        order: 12;
+      }
+      #three {
+        flex: 3;
+        margin-bottom: 10vw;
+        order: 111;
+      }
+      .p {
+        background-color: rgb(240, 239, 171);
+        columns: 2;
+        column-rule: 2px dashed rgb(1, 34, 1);
+        border: 2px solid black;
+      }
+      /* 水平对齐 */
+      .f {
+        display: flex;
+        background-color: rgb(134, 191, 238);
+        margin-top: 5px;
+        flex-flow: row wrap;
+      }
+      .item {
+        width: 80px;
+        text-align: center;
+        background-color: rgb(105, 236, 138);
+        box-sizing: border-box;
+        border: 1px solid rgb(255, 252, 252);
+      }
+      /* justify-content */
+      .s {
+        justify-content: start;
+      }
+      .c {
+        justify-content: center;
+      }
+      .e {
+        justify-content: end;
+      }
+      .b {
+        justify-content: space-between;
+      }
+      .a {
+        justify-content: space-around;
+      }
+      /* 垂直对齐：align-items */
+      ul {
+        text-decoration: none;
+        display: flex;
+        border: 1px solid silver;
+        background-color: rgb(250, 245, 179);
+        height: 90px;
+      }
+      li {
+        list-style-type: none;
+        text-align: center;
+        background-color: rgb(188, 243, 215);
+      }
+      ul li:nth-child(1) {
+        padding: 10px;
+      }
+      ul li:nth-child(2) {
+        padding: 15px 10px;
+      }
+      ul li:nth-child(3) {
+        padding: 20px 10px;
+      }
+      .start {
+        align-items: flex-start;
+      }
+      #btn {
+        border: 1px solid silver;
+        width: 200px;
+        text-align: center;
+        margin-top: 5px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="one">
+      <h1>hello</h1>
+      <div id="two">
+        <h3>I AM HERE</h3>
+      </div>
+      <div id="three">
+        <hr />
+        <p>THREE~</p>
+      </div>
+    </div>
+    <div class="p">
+      <p>失败是成功之母，成功你儿子失败了也不知道帮帮忙。</p>
+      <p>如果你没有梦想，那么你只能为别人的梦想打工。</p>
+      <p>我顶着压力上了这么多年学都没离家出走，你们不觉得我很坚强吗？</p>
+    </div>
+    <p>用justify-content属性来定义弹性盒子内部子元素在“横轴”上的对齐方式。</p>
+    <div class="f s">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <div class="f c">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <div class="f e">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <div class="f b">
+      <span>子元素平均分布</span>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <div class="f a">
+      <span>子元素平均分布，但两边有间距</span>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+    <ul id="start">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <div id="btn">切换垂直对齐方式</div>
+    <b></b>
+  </body>
+  <script>
+    // var btn = document.getElementById("btn");
+    var btn = document.getElementById("btn");
+    var ul = document.getElementById("start");
+    var b = document.getElementsByTagName("b")[0];
+    window.flag = 0;
+    btn.onclick = function c() {
+      if (flag == 0) {
+        ul.style.alignItems = "center";
+        btn.innerHTML = "center";
+        flag = 1;
+      } else if (flag == 1) {
+        ul.style.alignItems = "end";
+        btn.innerHTML = "flex-end";
+        flag = 2;
+      } else if (flag == 2) {
+        ul.style.alignItems = "base-line";
+        btn.innerHTML = "base-line";
+        flag = 3;
+      } else if (flag == 3) {
+        ul.style.alignItems = "stretch";
+        btn.innerHTML = "stretch";
+        flag = 4;
+      } else if (flag == 4) {
+        ul.style.alignItems = "start";
+        btn.innerHTML = "start";
+        flag = 0;
+      }
+      b.innerHTML = "点击" + flag + "次";
+    };
+  </script>
+</html>
