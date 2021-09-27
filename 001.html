@@ -1,0 +1,328 @@
+<!-- 文档声明，表示这是一个HTML页面 -->
+<!DOCTYPE HTML>
+<!-- html标签，告诉浏览器页面从<html>开始，到</html>结束。根标签-->
+<html>
+	<!-- head标签定义一些特殊内容。网站基本信息。结构标签-->
+	<head>
+		<!-- title定义网页的标题。30-40个字 -->
+		<title>
+			learn
+		</title>
+		<!-- meta标签一般用于定义页面的特殊信息,提示给搜素引擎蜘蛛看-->
+		<!-- 网页关键字 -->
+		<meta name="keywords" content="html 学习">
+		<!-- 网页描述 -->
+		<meta name="description" content="HTML练习网页">
+		<!-- 作者 -->
+		<meta name="author" content="Betty">
+		<!-- 版权声明 -->
+		<meta name="copyright" content="无">
+		<!-- http-equiv属性定义网页所使用的编码，定义网页自动刷新跳转 -->
+		<meta charset="utf-8">
+		<!-- 十秒后自动跳转网页 -->
+		<meta http-equiv="refresh" content="100000" ;url="https://www.yuque.com/jiuge-dffrs/xz66ou/nyy0lu">
+		<!-- 为表格加上边框 -->
+		<style typr="text/css">
+			table,tr,td{border:1px dotted silver}
+		</style>
+		<link rel="stylesheet" type="text/css" href="001.css">
+		<script>
+			//按钮函数，出现一个弹窗
+			window.onload = function() {
+				var btn = document.getElementsByClassName("but");
+				//鼠标放上去触发弹窗
+				btn[0].onmouseover = function(event) {
+					event.stopPropagation();
+					alert("❤");
+				}
+			}
+		</script>
+	</head>
+	<!-- 大部分代码都是在这个标签内部编写的 -->
+	<body>
+		<audio controls autoplay loop src="./Aaron Wright - Build It Better.mp3">
+			音频
+		</audio>
+		<div id="网页文本">
+			<h1>
+				一级标题极细
+			</h1>
+			<p>
+				Better to light one candle than to curse the darkness. 诅咒黑暗不如点燃蜡烛。
+				<br>
+				<strong>
+					粗体文本
+				</strong>
+				<b>
+					粗体文本****
+				</b>
+				<br>
+				<em>
+					斜体文本
+				</em>
+				<i>
+					斜体&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;文本***
+				</i>
+				<br>
+				<cite>
+					斜体文本&nbsp;
+					<sup>
+						上标&nbsp;
+					</sup>
+					段落
+					<sub>
+						下标
+					</sub>
+				</cite>
+				<s>
+					中划线
+				</s>
+				<u>
+					下划线
+				</u>
+				<big>
+					大字号文本
+				</big>
+				<small>
+					小字号文本
+				</small>
+			</p>
+			<!-- 水平线标签 -->
+			<hr>
+		</div>
+		<div id="列表和表格">
+			<div id="oo">
+				<!-- 降序显示 -->
+				<ol type="A" reversed>
+					<li>
+						html
+					</li>
+					<li>
+						css
+					</li>
+					<li>
+						javascript
+					</li>
+					<li>
+						jquery
+					</li>
+					<li>
+						vue.js
+					</li>
+				</ol>
+			</div>
+			<div id="uu">
+				<ul type="circle">
+					<li>
+						html
+					</li>
+					<li>
+						css
+					</li>
+					<li>
+						javascript
+					</li>
+					<li>
+						jquery
+					</li>
+					<li>
+						vue.js
+					</li>
+				</ul>
+			</div>
+			<!-- 定义列表 -->
+			<div id="dd">
+				<dl>
+					<dt>
+						定义名词
+					</dt>
+					<dd>
+						定义描述
+					</dd>
+					<dt>
+						definition term
+					</dt>
+					<dd>
+						definiton description
+					</dd>
+				</dl>
+			</div>
+			<hr>
+			<table>
+				<caption>
+					表格标题
+				</caption>
+				<thead>
+					<tr>
+						<th>
+							表头1
+						</th>
+						<th>
+							表头2
+						</th>
+						<th>
+							表头3
+						</th>
+						<th>
+							表头4
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">
+							1
+						</td>
+						<td>
+							1
+						</td>
+						<td>
+							1
+						</td>
+						<td>
+							1
+						</td>
+					</tr>
+					<tr>
+						<td>
+							2
+						</td>
+						<td colspan="2">
+							2
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="超链接练习">
+			<h1>
+				<em>
+					假装有标题
+				</em>
+			</h1>
+			<a href="https://www.yuque.com/jiuge-dffrs/xz66ou/retvkc" target="_parent"
+			title="hhh">
+				图片学习笔记
+				<img src="https://pic3.zhimg.com/v2-27e9e82c52e227884d4f4e1465fdf6e6_b.gif"
+				alt="表情包" title="可可爱爱">
+			</a>
+			<br>
+			<a href="demo.html" target="_blank">
+				内部链接测试，跳转到demo页面
+			</a>
+			<a href="#网页文本链接">
+				<br>
+				网页文本
+			</a>
+			<a href="#列表和表格">
+				<br>
+				列表和表格
+			</a>
+		</div>
+		<div id="表单">
+			<hr>
+			<form name="my-form" method="POST" action="001.js" target="_blank">
+				<label>
+					姓名：
+					<input type="text" value="玛卡巴卡" size="16" maxlength="6">
+					<br>
+				</label>
+				<label>
+					密码：
+					<input type="password" value="000000" size="16" maxlength="6">
+				</label>
+				<!-- 单选框 -->
+				<label>
+					<br>
+					性别：
+					<input type="radio" name="gender" value="男">
+					男
+					<input type="radio" name="gender" value="女">
+					女
+					<input type="radio" name="gender" value="其他">
+					其他
+				</label>
+				<label>
+					<br>
+					年龄：
+					<input type="radio" value="10">
+					10
+					<input type="radio" value="20">
+					20
+					<input type="radio" value="30">
+					30
+				</label>
+				<label>
+					<br>
+					爱好：
+					<!-- 复选框 -->
+					<input type="checkbox" name="favorite" value="喝水">
+					喝水
+					<input type="checkbox" name="favorite" value="吃饭">
+					吃饭
+					<input type="checkbox" name="favorite" value="读书">
+					读书
+					<input type="checkbox" name="favorite" value="聊天">
+					聊天
+					<!-- 多行文本框 -->
+					<br>
+					简介：
+					<textarea rows="3" cols="6" value="text">
+						默认文本
+					</textarea>
+					<br>
+					<!-- 下拉列表 -->
+					请选择：
+					<select multiple size="3">
+						<option>
+							0
+						</option>
+						<option>
+							1
+						</option>
+						<option>
+							2
+						</option>
+						<option>
+							3
+						</option>
+						<option>
+							4
+						</option>
+					</select>
+					<br>
+					<input type="submit" value="提交">
+					<input type="reset" value="重置">
+					<br>
+					<input type="file" value="文件上传">
+				</label>
+				<div class="but">
+					<input type="button" value="点击">
+				</div>
+			</form>
+		</div>
+		<hr>
+		<div id="框架">
+			<div id="photo" style="background:url(https://img.smzy.com/Soft/UploadPic/2015-8/201582115455348064.jpg) ">
+				<label>
+					春江花月夜
+				</label>
+				<!-- <img src="https://img.smzy.com/Soft/UploadPic/2015-8/201582115455348064.jpg"
+				alt="蓝月" title="看什么看~">  -->
+			</div>
+			<a href="https://www.bilibili.com" target="frames">
+				哔哩哔哩
+			</a>
+			<a href="http://www.jnshu.com/occupation/1/task" target="frames">
+				it修行院
+			</a>
+			<br />
+			<!-- 内联框架 缺点：搜索引擎不友好，多个滚动条-->
+			<!-- scrolling="no||yes||auto" 默认是yes-->
+			<iframe src="http://www.jnshu.com/occupation/1/task" width="80%" height="1000px"
+			name="frames" frameborder="1px" scrolling="no">
+			</iframe>
+		</div>
+	</body>
+
+</html>

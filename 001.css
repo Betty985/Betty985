@@ -1,0 +1,123 @@
+body{
+   background-color:papayawhip
+}
+#oo{
+    width:30%;
+    color:balck;
+    /* 水平对齐 */
+    text-align:left;
+    text-decoration:overline;
+    border:1px solid silver;
+    float:left;
+}
+#uu{
+    width:30%;
+    color:blueviolet;
+    text-align:center;
+    text-decoration:line-through;
+    overflow:hidden;
+}
+ul li{
+    list-style-type: none;
+    /* list-style-image:url(http://cdn.emojipic.cn/pic/160/apple/cow-face_1f42e.png); */
+    background:url(http://cdn.emojipic.cn/pic/160/apple/cow-face_1f42e.png) no-repeat  left top/contain; 
+    
+
+}
+#dd{
+    width:30%;
+    color:coral;
+    text-align:right;
+    text-decoration:underline;
+    float:right;
+    overflow:hidden;
+    position:relative;
+    top:12px;
+    right:620px;
+}
+/* 后代选择器 */
+#dd dt{
+    color:green;
+}
+/* 字体样式 */
+#网页文本{
+    font-family:幼圆,行楷， sans-serif;
+    font-size:medium;
+    border:1px dashed silver;
+    cursor:wait;
+}
+#网页文本 h1{
+    font-weight:lighter;
+    font-style:oblique;
+    line-height:21px;
+}
+/* 元素选择器 */
+p{
+    /* 文本缩进 */
+   text-indent: 28px;
+   /* 大小写转换 */
+   text-transform:lowercase
+   /* 字间距 */
+   /* letter-spacing: 3px; */
+}
+a{
+    text-decoration:none;
+    /* 词间距 */
+    word-spacing:20px;
+    color:cornflowerblue;
+    font-size:large;
+}
+/* 表格 */
+table{
+    caption-side:bottom;
+    border-collapse:collapse;
+    border-spacing:8px;/*不能与边框合并同时用*/
+}
+/* 图片 */
+#超链接练习 a img{
+    border : 2px solid purple;
+    text-align:right;
+    vertical-align:middle;
+    float:left;
+}
+#photo{
+    width: 1300px;
+    height:100px;
+    border:2px solid black;
+    color:lightpink;
+    /* background-image:url(https://img.smzy.com/Soft/UploadPic/2015-8/201582115455348064.jpg); */
+    background-repeat: repeat-x;
+    vertical-align:middle;
+    background-position:left top;
+    background-attachment:fixed;
+}
+/* 超链接伪类 */
+/* 未访问 */
+a:link{
+    color:gold;
+}
+a:visited{
+    color:black;
+}
+a:hover{
+   color:chocolate;
+}
+a:active{
+    color:greenyellow;
+}
+#oo:hover{
+    background-image:url(http://www.520touxiang.com/uploads/allimg/160609/3-160609145606-lp.jpg);
+}
+#列表和表格{
+    cursor:url(https://www.haoy99.com/FileUpload/2018-11/7-18Kuan_Bei_Jing_Tou_-112112_115.png),default;
+}
+#框架{
+    padding:20px 3px 2px 3px;
+    border: 2px solid silver;
+    margin: 2px 3px 2px 3px;
+}
+#网页文本{
+    position:fixed;
+    top:60px;
+    left:12px;
+}
