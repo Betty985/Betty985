@@ -1,0 +1,282 @@
+<!DOCTYPE HTML> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玛卡巴卡</title>
+    <link rel="stylesheet" type="text/css" href="002.css">
+    <link href="favicon.ico" rel="shortcut icon">
+    <!-- 引入jQuery库 -->
+    <script src="../jquery-3.6.0.min.js" type="text/javascript"></script>
+    <!-- jQuery测试代码 -->
+    <!-- <script> $(function(){alert("jquery");})</script> -->
+</head>
+<body>
+    <!-- <header>音乐播放器</header> -->
+    <nav >
+        <li><a href="#lyrics">歌词区</a></li>
+        <li><a href="#form">表格</a></li>
+        <li><a href="#attribute">元素操作</a></li>
+        <li><a href="#download">下载链接</a></li>
+        <li><a href="#storage">留言板</a></li>
+        <li><a href="#media">视频音频</a></li>
+        <li><a href="../001/001.html" target="_blank">001网页</a></li>
+        <li><a href="../九宫格/九宫格.html" target="_blank">九宫格</a></li>
+        <li><figure>
+            <img src="https://image.cilacila.com/uploads/20190112/22/1547301606-tVfvDbncBM.jpg" alt="tutu"> 
+            <figcaption>图标</figcaption>
+        </figure></li>
+    </nav>
+    <div id="lyrics">
+        <article >
+            <header>美周郎</header>
+            <p>谈笑风生回首斜阳 <br>肩上落叶枯黄<br> 城外执剑潸然泪光 <br>与谁讲 <br>白马惊在佳人端详
+                <br> 问君为何凄凉<br> 君怎像<br> 这三国<br> 美周郎 <br></p>
+                <aside><a href="http://www.yue365.com/getgeci/39129/433173.shtml" target="_blank" title="一颗小葱">歌词</a></aside>
+        </article>
+        <hr>
+        <section>
+            <hearder>歌曲简介</hearder>
+            <p>《美周郎》奏千古风流绝响，寄相思还酹红尘。
+                <a href="https://baike.baidu.com/item/%E7%BE%8E%E5%91%A8%E9%83%8E/55739609#reference-[2]-31203061-wrap" target="_blank" title="baidu">链接</a>
+            </p>
+        </section>
+        <footer>
+            <small>小小的字体~</small>
+            <!-- <nav>上一页、下一页</nav> -->
+            <address>这是一个地址，还是个斜体的</address>
+        </footer>
+    </div>
+    <div class="form">
+        <form method="POST" draggable="true" novalidate >
+            <fieldset>
+            <legend>一个可爱的表单</legend>
+            <br><label>电子邮箱：<input type="email" autofocus></label><br>
+            <label>电话号码：<input type="tel" list="nlist" autocomplete="off" pattern="^[0-9]{5,11}$">
+            <datalist id="nlist">
+                <option label="0" value="000000000"></option>
+                <option label="1" value="111111111"></option>
+                <option label="2" value="222222222"></option>
+            </datalist></label><br>
+            <label>你的网址：<input type="url" autofocus></label><br>
+            <input type="range" min="1" max="10" step="1" value="10">
+            <output value="0"></output><br>
+            <input type="number" min="0" max="5" step="1" value="0" >
+            <input type="color"><br>
+            <input type="date">
+            <input type="time"><br>
+            <input type="month">
+            <input type="week">
+            <p>
+                不能为空
+                <input type="text" list="mylist" autocomplete="on" autofocus placeholder="提示文字，输入消失" required>
+                <datalist id="mylist">
+                    <option label="1" value="雪落无垠"></option>
+                    <option label="2" value="雁过无痕"></option>
+                    <option label="3" value="如月秋色"></option>
+                    <option label="4" value="朱颜红唇"></option>
+                </datalist>
+            </p>
+            <button onclick="click()">验证</button>
+            <input type="submit"><br>
+            <keyen value="123"></keyen>
+            </fieldset>  
+        </form>
+        <script>
+            $(function(){
+                var zz=document.getElementsByTagName("input")[0];
+                // var reg=document.getElementsByTagName("button");
+                let r = /^\w+((-\w+)|(\.\w+))*@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+                function click(){
+                   if(!r.test(zz.value))alert("重新输入");
+                }
+           })
+        </script>
+        <time datatime="18点52分">18点52分</time>
+        <!-- value当前值 -->
+        <script>
+            $( function(){
+     // 滑动条  表单type新属性range 
+            var input=document.getElementsByTagName("input")[3];
+            var output=document.getElementsByTagName("output")[3];
+            // 获取滑动条初始值
+            // output.value=input.value;
+            // 拖动滑动条改变初始值
+            input.onchange=function(){
+                // output.value=input.value;
+            }})
+        </script>
+        <progress max="100" value="20"></progress>
+        <meter min="0" value="3" max="5"></meter><br>
+     <!-- 文件操作 -->
+         <label id="labelfile">选择文件</label>
+         <input id="ff" type="file" multiple accept="image/jpeg,image/jpg,image/png,text/plain"><br>
+         <button onclick="fi()">文件信息</button>
+         <button onclick="fr()">文件预览</button>
+         <div id="fileShow" style="width:100px;height:auto;border:1px solid silver;"></div>
+         <!-- div不能限制图片的大小，需要用图片的style属性实现 -->
+</div>
+    <!-- data-*属性+contenteditable+元素拖放 -->
+    <div class="attribute" contenteditable="true" draggable="true">
+       <p hidden draggable="false">一段隐藏文字练习hidden属性,并且draggable值是false</p>
+       <p id="dc" data-color="orange" data-text-src="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes/data-*">
+        contenteditable继承自父元素，值为true，元素内容可以被编辑</p>
+       <script>
+          $(function (){
+               var pp=document.getElementById("dc");
+               pp.style.color=pp.dataset.color;
+               pp.innerText+=pp.dataset.textSrc;})
+        </script> 
+    <div >
+        <script>
+             //    元素拖放
+             $(function mm(){
+                var mov=document.getElementsByClassName("i");
+                var mov2=document.getElementsByClassName("Td");
+                var offsetX,offsetY;
+                //记录偏移量
+                mov.ondragstart=function(e){
+                    offsetX=e.offsetX;
+                    offsetY=e.offsetY;
+                    e.dataTransfer.setData("text/plain",e.target.id);
+                }
+                //重新设置坐标，偏移量
+                mov.ondrag=function(e){
+                    if(e.pageX==0&&e.pageY==0) return;
+                    mov.style.left=(e.pageX-offsetX)+"px";
+                    mov.style.top=(e.pageY-offsetY)+"px";
+                }
+                mov2.ondragover=function(e){
+                    // 屏蔽元素默认行为,否则drop事件不会被触发
+                    e.preventDefault();
+                }
+                // 为目标元素添加ondrop行为
+                mov2.ondrop=function(e){
+                    e.preventDefault();
+                    var id=e.dataTransfer.getData("text/plain");
+                    var obj=document.getElementById(id);
+                    mov2.appendchild(id);
+                }
+            }    )
+        </script>
+         <img class="i" src="http://5b0988e595225.cdn.sohucs.com/images/20190624/a8058c9deda149569f24b769b96a289e.jpeg" 
+         alt="爱宠大机密" title="元素拖放" > 
+    </div>   
+    <div class="Td" style="color:red">
+        元素放置位置，还没有实现
+    </div>
+    <div class="fo">
+        <!-- 拖拽文件并读取 -->
+        <script>
+         $(     function fg(){
+                var oBox = document.getElementById("box");
+                var oContent = document.getElementById("content");
+                // 阻止默认行为
+                oBox.ondragover = function(e){
+                  e.preventDefault();
+                }
+                // 添加ondrop事件
+                oBox.ondrop = function(e){
+                    e.preventDefault();
+                    // 读取文本
+                    var file = e.dataTransfer.files[0];
+                    var rd = new FileReader();
+                    rd.readAsText(file,"utf-8");
+                    rd.onload = function(){
+                        oContent.innerHTML = this.result;
+                    }
+                }
+            })
+        </script>
+        <div id="box" style="width:180px;height:50px;border:1px solid silver;">拖拽到这里可以预览文本</div>
+        <p id="content"></p>
+        <!-- 图片拖拽预览 -->
+        <script>
+          $(function ipre(){
+            var ib = document.getElementById("ib");
+        //   阻止默认行为
+        ib.ondragover = function(e){
+            e.preventDefault();
+        }
+        // 添加ondrop事件
+        ib.ondrop = function(e){
+            e.preventDefault();
+            // 获取file对象
+            var ifile = e.dataTransfer.files[0];
+            var ireader = new FileReader(); alert(ig.src)
+            ireader.readAsDataURL(ifile);
+            ireader.onload = function(){
+                var ig = document.createElement("img");
+                // 设置图片src为this.result
+                ig.src = this.result;
+                ig.style.width = "100px";
+               
+                document.body.appendChild(ig);
+            }
+        }
+          })
+        </script>
+         </div>
+      <div id="ib" style="width:180px;height:150px;border:1px solid silver; color:red">图片拖拽位置</div>
+        <!-- 创建链接并下载 -->
+        <body>
+     <div id="download">
+             <br>
+            <textarea id="txt" cols="40" rows="2" placeholder="文本区 &#10;在这里输入TXT文件内容"></textarea><br>
+            <input id="lBtn" type="button" value="创建链接" onclick="loadUrl()">
+            <div id="lUrl" ></div>
+        </body>
+    </div>
+        <!-- 改进版创建下载链接 -->
+        <div id="improvedDownload"></div>
+                 <textarea id="imTxt" cols="40" rows="2" placeholder="改进版文本区&#10;在这里输入文本内容"></textarea>
+                 <br><input id="imBtn" type="button" value="改进版下载文件" onclick="imDownload()"> 
+        </div>      
+    <div id="storage" >
+            <strong>留言板</strong>
+            <p>账号：<input id="user" type="text"></p>
+            <p>密码：<input id="pwd" type="text"></p>
+            <button id="lsbtn" onclick="ls()">设置</button>
+            <button onclick="mb()">启用</button>
+            <p id="lsmes"></p>
+            <ul id="llist"></ul>
+            <textarea id="ltxt" cols="56" rows="6" placeholder="这是一段留言"></textarea>
+            <br><button id="lbtn">发表</button>
+            <button id="lcbtn">清空</button>
+    </div>
+    <!-- 计数器 -->
+    <p id="counter">我在这里</p>
+    <div id="media">
+        <!-- 自动播放autoplay  显示控件 循环播放 预加载 -->
+        <video  width="200px" height="400px" controls loop preload="metadata">
+            <!-- src属性是放在source元素中，而不是放在video元素中。如果当前浏览器能同时识别几种视频格式，则最终将使用第一个可识别的格式文件。 -->
+            <source type="video/mp4" src="./民族.mp4">
+            <!-- <source type="video/ogg" src="http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.ogg">
+            <source type="video/webm" src="http://vfx.mtime.cn/Video/2019/02/04/mp4/190204084208765161.webm"> -->
+        </video>
+        <!-- 点点效果 -->
+        <div class="indicator">
+            <i classs="indicator-dot"></i>
+            <i classs="indicator-dot"></i>
+            <i classs="indicator-dot"></i>
+            <i classs="indicator-dot"></i>
+            <i classs="indicator-dot"></i>
+            <i classs="indicator-dot"></i>
+            <i classs="indicator-dot"></i>
+        </div>
+        <input id="play" type="button" value="播放">
+        <input id="reduce" type="button" value="音量-">
+        <input id="add" type="button" value="音量+">
+        <input id="muted" type="button" value="静音" >
+        <input id="slow" type="button" value="慢放" >
+        <input id="fast" type="button" value="快放" >
+        <!-- 进度条 -->
+        <input id="v-range" type="range" >
+        <!-- 显示时间 -->
+        <span id="currentTime"></span>/
+        <span id="duration"></span>
+    </div>
+    <script type="text/javascript" src="002.js"></script>
+</body>
+</html>
