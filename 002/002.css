@@ -1,0 +1,156 @@
+/* .hide{
+    display:none;
+} */
+/* 样式初始化 */
+*{  
+    margin:0;
+    padding :0;
+    color:beige;
+    background-color: black;
+}
+/* 清除浮动 */
+ul ::after,
+div ::after{
+    content:"";
+    display:block;
+    clear: both;
+}
+/* 导航栏 */
+nav{
+    position:relative;
+    left:0;
+    top:0;;
+    /* opacity: 0.8; */
+    background-color: rgba(10, 10, 236, 0.116);
+    text-align: center;
+}
+
+li{
+    float: left;
+    /* 列表项 li 默认样式移除。 */
+    list-style-type:none;
+    border:1px solid silver;
+    border-radius: 1em;
+    background-color: transparent;
+    width:8em;
+    height:2em;
+    text-align: center;
+    vertical-align:middle;
+}
+nav :last-child{
+    background-color: transparent;
+    border:0;
+    height:2em;
+}
+figure img{
+    width:40px;
+    height:auto;
+}
+figcaption{
+    float:left;
+    background-color: rgba(0,0,0,0.5);
+    text-align:center;
+    font-family:幼圆;
+    border:1px solid silver;
+    font-size: 1em;
+}
+a{
+    color:rgb(250, 246, 240);
+    text-decoration: none;
+}
+
+a:visited{
+    color:rgb(245, 201, 245);
+}
+a:active{
+   color:rgb(178, 241, 178);
+}
+a:hover{
+    color:yellow;
+}
+/* 类选择器是圆点 */
+.attribute{
+    width:800px;
+    height:auto;
+    border:2px solid silver;
+    text-align:left;
+}
+.i{
+    width:160px;
+}
+/* 文件操作 */
+#ff{
+    opacity:0;
+}
+#labelfile{
+    background-color: darkslateblue;
+    border-radius:3px ;
+    font-family: 微软雅黑;
+    font-weight: 600;
+    position:relative;
+    left:120px;
+    top:0px;
+    opacity: 0.5;
+}
+#storage{
+    position:absolute;
+    right: 0px;
+    top:4em;
+    background-color:transparent; 
+    border:3px solid rgba(216, 245, 250, 0.925);
+    width:400px;
+    height:300px;
+    overflow:auto;
+}
+/* 计数器固定 */
+#counter{
+    position:fixed;
+    left:6px;
+    bottom:16px;
+    color:rgba(224, 183, 252, 0.822);
+}
+#media{
+    border: 2px solid silver;
+    margin-top: 100px;
+    margin-left:100px;
+    width:200px;
+    position:relative;
+}
+#lyrics{
+    width:400px;
+}
+
+.form{
+    width:500px;
+    height:500px;
+    overflow: hidden;
+}
+/* media  点点效果 */
+.indicator{
+    width: 152px;
+    height: 18px;
+    position: absolute;
+    left: 46px;
+    bottom: 210px;
+    /* border: 2px solid #fff;
+    border-radius: 20px; */
+}
+.indicator  .indicator-dot{
+    display: block;
+    float: left;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000;
+    /* 把边框收进去 */
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.indicator  .indicator-dot ::after{
+    content: "";
+    display: block;
+    width:6px;
+    height:6px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 1;
+}
