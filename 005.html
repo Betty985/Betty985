@@ -1,2 +1,74 @@
-<DOCTYPE HTML>
-  
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>其他样式</title>
+    <style>
+      @keyframes t {
+        0% {
+          background: linear-gradient(to left, #ccffcc, #99cccc);
+          width: calc(50%+1px);
+          /* 旋转：rotate() */
+          transform: rotate(30deg);
+        }
+        50% {
+          background: linear-gradient(to right, #ccffcc, #99cccc);
+          /* 平移：translate() */
+          transform: translateX(70px);
+          /* 倾斜：skew() */
+          transform: skew(20deg);
+          /* 缩放：scale() */
+          transform: scale(1.2);
+        }
+        100% {
+          transform: translateX(100px);
+          border-radius: initial;
+        }
+      }
+      .txt:focus {
+        outline: 2px solid skyblue;
+        width: 200px;
+        border-radius: 30%;
+      }
+      #qq {
+        border: 1px solid silver;
+        background-color: rgb(201, 230, 121); /* 不支持线性的时候显示 */
+        min-width: 100px;
+        min-height: 100px;
+        max-height: calc(300px + 1em);
+        max-width: calc(300px + 1rem);
+        animation: t 3s ease-in 1s;
+      }
+      #ww {
+        max-height: calc(300px + 1em);
+        max-width: calc(300px + 1rem);
+      }
+      p {
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        border-bottom: 50%;
+        background: radial-gradient(circle, #ccffcc, #99cccc);
+      }
+    </style>
+  </head>
+  <body>
+    <input class="txt" type="text" />
+    <input class="txt" type="text" />
+    <input class="txt hello" type="text" />
+    <div id="qq"></div>
+    <div id="ww">
+      <button id="btn">溢出处理</button>
+      <p id="p"></p>
+    </div>
+  </body>
+  <script>
+    window.onload = function () {
+      var btn = document.getElementById("btn");
+      var p = document.getElementById("p");
+      btn.onclick = function () {};
+    };
+  </script>
+</html>
