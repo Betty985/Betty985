@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+      input {
+        background: none;
+        border: 0;
+        outline: 0;
+      }
+      ul {
+        list-style: none;
+        font-size: 12px;
+      }
+      li {
+        list-style-type: none;
+        margin-top: 20px;
+      }
+      .left li {
+        float: left;
+        margin-left: 28px;
+      }
+      .right li {
+        float: right;
+        margin-right: 18px;
+      }
+      .right li:first-child {
+        margin-left: -10px;
+      }
+      .right li:nth-child(2) {
+        width: 24px;
+        height: 24px;
+        border: 1px solid blue;
+        padding: 1px;
+        border-radius: 50%;
+        text-align: center;
+      }
+      .small {
+        width: 21px;
+        height: 21px;
+        /* display: inline-block; */
+        border-radius: 50%;
+      }
+
+      figure img {
+        margin-top: 50px;
+        width: 280px;
+        text-align: center;
+        padding-left: calc(40%);
+        display: inline-block;
+      }
+      .search {
+        text-align: center;
+      }
+
+      span {
+        display: inline-block;
+        background-color: #4e6ef2;
+        line-height: 40px;
+        color: white;
+        width: 100px;
+        height: 40px;
+        border: 2px solid #4e6ef2;
+        border-radius: 0 12px 12px 0;
+        position: absolute;
+      }
+      input {
+        display: inline-block;
+        width: 560px;
+        height: 40px;
+        border: 2px solid silver;
+        border-right: 0;
+        border-radius: 12px 0 0 12px;
+
+        position: relative;
+        top: 0;
+        right: 0px;
+      }
+      input:focus {
+        border: 2px solid #4e6ef2;
+        border-right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="left">
+        <li>新闻</li>
+        <li>hao123</li>
+        <li>地图</li>
+        <li>直播</li>
+        <li>视频</li>
+        <li>贴吧</li>
+        <li>学术</li>
+        <li>更多</li>
+      </ul>
+      <ul class="right">
+        <li>用户00001</li>
+        <li>
+          <a href="https://www.baidu.com/" target="_blank"></a
+          ><img
+            class="small"
+            src="https://pic4.zhimg.com/v2-c34c61a90095abb8713de9d1dca7ec7b_r.jpg"
+          />
+        </li>
+        <li>设置</li>
+        <li>地球</li>
+      </ul>
+    </header>
+    <div class="hi">
+      <figure>
+        <img
+          alt="百度"
+          title="百度一下，你就知道"
+          src="https://img.zcool.cn/community/011a5357b64c620000018c1b9e7e67.png@1280w_1l_2o_100sh.png"
+        />
+        <a
+          href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C&sa=ire_dl_gh_logo_texing&rsv_dl=igh_logo_pc"
+          target="_blank"
+        ></a>
+      </figure>
+
+      <div class="search"><input type="text" /><span>百度一下</span></div>
+    </div>
+  </body>
+</html>
