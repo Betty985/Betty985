@@ -5,9 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width= , initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+      }
+      ul {
+        display: inline-grid;
+        list-style: none;
+        font-size: 14px;
+        margin-top: 20px;
+        width: 600px;
+      }
+      .left li {
+        margin-left: 18px;
+      }
+      .left {
+        grid-template-columns: repeat(8, 50px);
+        justify-content: start;
+        /* grid-gap: 60px auto; */
+      }
+      .right {
+        grid-template-columns: 66px 66px 40px 70px;
+        justify-content: end;
+        justify-items: center;
+        margin-right: 20px;
+      }
+      .right img {
+        width: 21px;
+        height: 21px;
+        /* display: inline-block; */
+        border-radius: 50%;
+        /* margin: 6px; */
+        padding: 1.8px;
+        border: 1px solid blue;
+      }
+      figure img {
+        width: 280px;
+        text-align: center;
+        padding-left: calc(40%);
+        display: inline-block;
+      }
+
+      .search {
+        text-align: center;
+      }
+      input {
+        display: inline-block;
+        width: 560px;
+        height: 40px;
+        border: 2px solid silver;
+        border-right: 0;
+        border-radius: 12px 0 0 12px;
+        padding-left: 20px;
+        position: relative;
+      }
+      /* 相邻兄弟选择器 */
+      input + img {
+        height: 38px;
+        /* margin-left: -46px; */
+        margin-top: -20px;
+        position: relative;
+        top: 16px;
+        right: 60px;
+      }
+      input:focus {
+        border: 2px solid #4e6ef2;
+        border-right: 0;
+        padding-left: 20px;
+      }
+      span {
+        display: inline-block;
+        background-color: #4e6ef2;
+        line-height: 40px;
+        color: white;
+        width: 100px;
+        height: 40px;
+        border: 2px solid #4e6ef2;
+        border-radius: 0 12px 12px 0;
+        position: relative;
+        bottom: -1.3px;
+        right: 50px;
+      }
+    </style>
   </head>
   <body>
-    <div>
+    <div class="header">
       <ul class="left">
         <li>新闻</li>
         <li>hao123</li>
@@ -18,8 +103,6 @@
         <li>学术</li>
         <li>更多</li>
       </ul>
-    </div>
-    <div>
       <ul class="right">
         <li>地球</li>
         <li>设置</li>
@@ -46,6 +129,15 @@
             target="_blank"
           ></a>
         </figure>
+      </div>
+      <div class="search">
+        <input />
+        <img
+          alt="相机"
+          src="http://www.sucaijishi.com/uploadfile/2013/0522/20130522035858406.png"
+          title="按图片搜索"
+        />
+        <span>百度一下</span>
       </div>
     </div>
   </body>
