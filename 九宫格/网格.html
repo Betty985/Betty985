@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="wclassth=device-wclassth, initial-scale=1.0"
+    />
+    <title>九宫格-网格</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        /* grid-template-areas: "item item item" "item item item" "item item item"; */
+        grid-gap: 0.6vw 0.6vw;
+        justify-content: center;
+        align-content: center;
+      }
+      .item {
+        width: 30vw;
+        height: 30vw;
+        background-color: rgb(255, 166, 0);
+        border-radius: 10%;
+        /* grid-area: item; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
