@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+}
+img {
+  cursor: pointer;
+}
+.right img {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  padding: 1.8px;
+  border: 1px solid blue;
+  margin-right: -24px;
+  margin-left: -10px;
+}
+figure img {
+  width: 280px;
+  text-align: center;
+  padding-left: calc(40%);
+}
+.search {
+  text-align: center;
+}
+input {
+  display: inline-block;
+  width: 560px;
+  height: 40px;
+  border: 2px solid silver;
+  border-right: 0;
+  border-radius: 12px 0 0 12px;
+  padding-left: 20px;
+  position: relative;
+}
+/* 相邻兄弟选择器 */
+input + img {
+  height: 38px;
+  /* margin-left: -46px; */
+  margin-top: -20px;
+  position: relative;
+  top: 16px;
+  right: 60px;
+}
+input:focus {
+  border: 2px solid #4e6ef2;
+  border-right: 0;
+  padding-left: 20px;
+}
+span {
+  display: inline-block;
+  background-color: #4e6ef2;
+  line-height: 40px;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border: 2px solid #4e6ef2;
+  border-radius: 0 12px 12px 0;
+  position: relative;
+  bottom: -1.3px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-items: center;
+  font-size: 13px;
+  height: 40px;
+  width: 100%;
+  /* background-color: red; */
+  align-items: flex-end;
+  justify-content: space-around;
+}
+/* li:hover {
+  width: 60px;
+  justify-content: end;
+} */
+li {
+  margin-left: 28px;
+}
+.left {
+  display: inline-flex;
+  justify-content: space-around;
+}
+.right {
+  display: inline-flex;
+  flex: 1 0 70px;
+  justify-content: flex-end;
+  /* margin: 20px 14px 20px 14px; */
+}
