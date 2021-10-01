@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      a:link {
+        color: initial;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: red;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: blue;
+      }
+
+      a:active {
+        color: purple;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 为原始文字列表项添加超链接，形成黑色字体的新闻列表链接形式，没有点击新闻时不会显示下划线，
+        点击新闻后字体变为红色并出现下划线，鼠标悬浮在新闻上时字体变蓝色。
+    效果如图所示。（结合a:link{}  a:hover{}  a:visited{}  a:active{} 以及
+        text-decoration属性值为none/underline等CSS样式完成）
+     -->
+
+    <div>
+      <p>通知</p>
+      <ul>
+        <li>
+          <a href="https://www.baidu.com/" target="_blank" title="发展论坛"
+            >发展论坛</a
+          >
+        </li>
+        <li>
+          <a href="https://www.baidu.com/" target="_blank" title="顺利召开"
+            >顺利召开</a
+          >
+        </li>
+        <li>
+          <a href="https://www.baidu.com/" title="回顾往日风采" target="_blank"
+            >回顾往日风采</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.baidu.com/"
+            title="学习新思想，争做新青年"
+            target="_blank"
+            >学习新思想，争做新青年</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.baidu.com/"
+            title="情系九月生日会"
+            target="_blank"
+            >情系九月九月生日会</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.baidu.com/"
+            title="信息管理学院管理科学与工程专业考研经验分享会顺利召开"
+            >信息管理学院管理科学与工程专业考研经验分享会顺利召开</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.baidu.com/"
+            title="立足新起点，实现新提升——信息管理学院2017级大一学年学业情况分析与分享会"
+            >立足新起点，实现新提升——信息管理学院2017级大一学年学业情况分析与分享会</a
+          >
+        </li>
+        <li>
+          <a href="https://www.baidu.com/" title="夏令营系列报道（三)"
+            >夏令营系列报道（三)</a
+          >
+        </li>
+      </ul>
+    </div>
+    <p>
+      如果想让link起作用，就要将浏览器的缓存清除。 a:hover 必须在 a:link 和
+      a:visited 之后，需要严格按顺序才能看到效果。 a:active 必须在 a:hover
+      之后。 无效链接点击后没有产生网页访问的历史记录, 所以链接点击后无效。
+      a:visited因为安全问题，在高版本的浏览器中，只有color属性才可以生效。但是可以用js解决。要设置target="_blank"，在新窗口打开，否则当前页面的一切js数据都会从内存中清除。
+    </p>
+  </body>
+  <script>
+    window.onload = function () {
+      var a = new Array();
+      for (let i = 0; i < 8; i++) {
+        a[i] = document.getElementsByTagName("a")[i];
+      }
+      for (let i = 0; i < 8; i++) {
+        a[i].onclick = function () {
+          a[i].style.textDecoration = "underline";
+        };
+      }
+    };
+  </script>
+</html>
