@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+      }
+      #v {
+        height: 500px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: space-between;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+      video {
+        flex: 2 0 auto;
+      }
+      ul {
+        flex: 1 0 auto;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        min-width: 40px;
+        max-width: 210px;
+      }
+
+      span {
+        width: 70px;
+      }
+      span::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 80%;
+        background-color: silver;
+        position: relative;
+        top: -36px;
+        left: 66px;
+      }
+      li {
+        width: 80px;
+        line-height: 40px;
+        display: flex;
+        justify-content: start;
+        font-family: 幼圆;
+        margin-top: 3px;
+        overflow: hidden;
+      }
+      li:nth-child(odd) {
+        background-color: #13293d;
+        color: #aed9e0;
+      }
+      li:nth-child(even) {
+        background-color: #2f3e46;
+        color: #eef5db;
+      }
+      ul:hover li {
+        border-radius: 9px;
+        width: 178px;
+      }
+      .in {
+        width: 0px;
+        opacity: 0.3;
+        line-height: 28px;
+        outline: 1px solid silver;
+        transition: all 0.3s;
+      }
+      ul:hover .in {
+        width: 90px;
+        line-height: 30px;
+        opacity: 1;
+        height: 22px;
+      }
+
+      input:focus {
+        outline: 1px solid #ffbf69;
+      }
+      ::selection {
+        background-color: black;
+        color: #eff7f6;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <video
+        id="v"
+        src="第[1]讲OOP原则分析.mp4"
+        controls
+      ></video>
+      <ul>
+        <li>
+          <span>url</span
+          ><input class="in" id="i" type="text" placeholder="输入视频url" />
+        </li>
+        <li>
+          <span>播放速度</span>
+          <select id="s" class="in">
+            <option value="0.5">0.5</option>
+            <option value="0.75">0.75</option>
+            <option value="1" selected>1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+          </select>
+        </li>
+        <li>
+          <span>高度</span
+          ><input class="in" id="h" type="text" placeholder="输入视频高度" />
+        </li>
+        <li><span>背景</span><input class="in" id="c" type="color" /></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    window.onload = function () {
+      var i = document.getElementById("i");
+      var v = document.getElementById("v");
+      var s = document.getElementById("s");
+      var h = document.getElementById("h");
+      var c = document.getElementById("c");
+      i.addEventListener("change", function () {
+        v.src = this.value;
+      });
+      s.addEventListener("change", function () {
+        v.playbackRate = this.value;
+      });
+      h.addEventListener("change", function () {
+        v.style.height = this.value;
+      });
+      c.addEventListener("change", function () {
+        document.body.style.backgroundColor = this.value;
+      });
+    };
+  </script>
+</html>
