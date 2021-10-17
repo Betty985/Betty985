@@ -16,7 +16,7 @@ window.onload = function hi() {
   one.addEventListener("input", () => {
     obj.val = one.value;
     two.innerText = obj.val;
-    console.log(obj.val);
+//     console.log(obj.val);
   });
   two.addEventListener("input", () => {
 //     一个好玩的bug，如果有这行代码，第二框自动从右向左输入，我还不知道为什么……
