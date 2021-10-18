@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <style>
+        .box{
+            width:600px;
+        }
+        #table{
+            width:600px;
+            border:1px solid silver;
+            border-spacing: 0;/*去掉单元格间隙*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <input id="name" type="text" placeholder="name" required autofocus>
+    <input id="price" type="text" placeholder="price"  required>
+    <input id="number" type="text" placeholder="number" required>
+    <input id="add" type="submit" onclick="add()" value="add">
+    <hr>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>number</th>
+                <th>operation</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <p id="p">总价：</p>
+    </div>
+    
+</body>
+<script>
+    // 不能设置成name   结果："[object HTMLInputElement]" 原因：所设参数与HTML内置参数相同，造成在传递过程中，自动转成HTML参数进行传递
+   var n=document.getElementById("name");
+   var price=document.getElementById("price");
+   var number=document.getElementById("number");
+   var add=document.getElementById("add");
+   var t=document.getElementById("table");
+   var p=document.getElementById("p");
+   var arr=[n,price,number];
+//    添加按钮功能
+   add.onclick=function add (){ 
+    //    错误处理——弹窗
+     for(let i=0;i<arr.length;i++)
+     {
+        if(!arr[i].value) {
+            alert(arr[i].id+"不能为空");
+            // 结束函数
+           return 0;}}
+    //    添加数据
+        var row=document.createElement("tr");
+        for(m=0;m<5;m++){
+               var cell=document.createElement("td");
+               if(m==0) cell.innerHTML=t.rows.length; 
+              else if(m==4)
+              {
+                //    var btn=document.createElement("button");
+                //    btn.setAttribute("class","del");
+                //    btn.innerHTML="delete";
+                //    cell.append(btn);
+                cell.innerHTML="<input class='del' type='button' onclick='del()' value='del'>";
+                   }
+         else  {
+            if (m==3){
+                  cell.innerHTML="<input class='sub' type='button' onclick='nu()' value='-'>"
+                  +arr[m-1].value+"<input class='inc' type='button' onclick='nu()' value='+'>";
+               }
+            else cell.innerHTML=arr[m-1].value;
+            arr[m-1].value="";
+         }
+         row.append(cell);
+         }
+    table.append(row);   
+}
+window.onload=function (){
+// 数量增减功能
+// 换成全局方法
+window.nu= function (){
+    for(i=0;i<table.rows.length;i++)
+{  
+    // 数量减少
+    // nextSibling 属性返回指定节点之后紧跟的节点，在相同的树层级中。
+    var s= document.getElementsByClassName("sub")[i];
+    s.addEventListener("click",function(){
+        //  它的下一个节点是一个对象
+        s.nextSibling.data--;
+        
+    });
+    // 数量增加
+    var a= document.getElementsByClassName("inc")[i];
+    a.addEventListener("click",function(){
+        // previousSibling 
+       a.previousSibling.data++;
+    });
+
+}
+}
+// 删除行
+window.del=function()
+{
+    
+	table.deleteRow(0);
+}
+p.onchange=function compute(){
+    var pm=0;
+    for(let i=0;i<table.rows.length;i++){
+         
+    }
+}
+}
+</script>
+</html>
