@@ -20,7 +20,9 @@ window.onload = function hi() {
   });
   two.addEventListener("input", () => {
 //     一个好玩的bug，如果有这行代码，第二框自动从右向左输入，我还不知道为什么……
+//     只要访问obj.val就会实现two和one数据的同步
     // obj.val = two.innerText;
     one.value = obj.val;
   });
 };
+// selection 是一个 Selection 对象。 
