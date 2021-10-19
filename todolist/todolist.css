@@ -1,0 +1,34 @@
+i,
+b {
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 12px;
+}
+body {
+  background-color: rgb(229, 245, 236);
+  font-family: "幼圆", Courier, monospace;
+  font-size: 18px;
+}
+b:hover {
+  cursor: pointer;
+}
+.host {
+  text-align: center;
+}
+p {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+#wait,
+#com {
+  border: 2px double silver;
+  width: 60%;
+  margin: 2% 16%;
+}
+.mark {
+  width: 18px;
+  border: 1px solid black;
+  margin: 0 12px;
+  background-color: rgb(200, 187, 255);
+}
