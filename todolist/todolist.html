@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <link href="todo.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="wait">
+      <input id="in" placeholder="输入待办事项" />
+      <button class="add" onclick="addp();">添加</button>
+      <br />
+      <span>待办</span>
+      <p class="ap">
+        <span class="asq">□</span> <i contenteditable="true">实验报告</i>
+        <b>删除</b>
+      </p>
+    </div>
+    <hr />
+    <div id="com">
+      <span>已完成</span>
+      <p class="cp"><span class="csq">✔</span> <i>看路灯</i> <b>删除</b></p>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
