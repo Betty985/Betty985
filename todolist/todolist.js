@@ -24,8 +24,10 @@ function addp() {
   // 将文本节点添加到 <p> 元素中
   //   p.appendChild(item);
   let span = document.createElement("span");
-  span.setAttribute("class", "asq");
-  span.innerText = "□  ";
+  span.setAttribute("class", "mark");
+  //   span.innerText = "";
+  span.style.border = "1px solid black";
+  span.style.width = "18px";
   //   将新元素添加到开始位置，可以使用 insertBefore() 方法:
   //   Node.insertBefore() 方法在参考节点之前插入一个拥有指定父节点的子节点。
   // var insertedNode = parentNode.insertBefore(newNode, referenceNode);
@@ -35,6 +37,12 @@ function addp() {
   // 添加到已存在的元素中
   awi.appendChild(p);
   //   console.log(input.value);
+  span.addEventListener("click", function () {
+    span.innerText = "✔  ";
+    com.appendChild(p);
+  });
+  //   清空输入框
+  input.value = "";
 }
 // enter键添加
 input.onkeydown = function (event) {
