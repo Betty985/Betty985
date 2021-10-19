@@ -3,6 +3,7 @@ var add = document.querySelector(".add");
 var awi = document.querySelector("#wait");
 var com = document.querySelector("#com");
 var list = [];
+
 function addp() {
   //   创建 <p> 元素
   let p = document.createElement("p");
@@ -10,6 +11,9 @@ function addp() {
   let b = document.createElement("b");
   i.innerText = input.value;
   b.innerText = "  删除";
+  b.addEventListener("click", function () {
+    p.remove();
+  });
   i.setAttribute("contenteditable", "true");
   p.appendChild(i);
   // 为 <p> 元素创建一个新的文本节点
@@ -30,7 +34,7 @@ function addp() {
   //   p.insertBefore(span, item);
   // 添加到已存在的元素中
   awi.appendChild(p);
-  console.log(input.value);
+  //   console.log(input.value);
 }
 // enter键添加
 input.onkeydown = function (event) {
