@@ -1,13 +1,17 @@
 i,
-b {
+b,
+strong {
   font-style: normal;
   font-weight: normal;
   margin: 0 12px;
+  border: 1px solid silver;
 }
+
 body {
   background-color: rgb(229, 245, 236);
   font-family: "幼圆", Courier, monospace;
   font-size: 18px;
+  font-weight: bold;
 }
 b:hover {
   cursor: pointer;
@@ -31,4 +35,8 @@ p {
   border: 1px solid black;
   margin: 0 12px;
   background-color: rgb(200, 187, 255);
+}
+.msg {
+  justify-items: start;
+  background: linear-gradient(to right, #ffcccc, #ccccff, #ccffcc);
 }
