@@ -7,8 +7,20 @@ var list = [];
 function addp() {
   //   创建 <p> 元素
   let p = document.createElement("p");
+  // 任务
   let i = document.createElement("i");
+  // 删除按钮
   let b = document.createElement("b");
+  let date = document.createElement("strong");
+  let time = new Date();
+  date.textContent = time.toUTCString();
+  date.style.display = "none";
+  p.onmouseover = function () {
+    date.style.display = "inline";
+  };
+  p.onmouseout = function () {
+    date.style.display = "none";
+  };
   i.innerText = input.value;
   b.innerText = "  删除";
   b.addEventListener("click", function () {
@@ -23,6 +35,7 @@ function addp() {
   //   p.setAttribute("contenteditable", "true");
   // 将文本节点添加到 <p> 元素中
   //   p.appendChild(item);
+  // 项目符号
   let span = document.createElement("span");
   span.setAttribute("class", "mark");
   //   span.innerText = "";
@@ -32,6 +45,7 @@ function addp() {
   //   Node.insertBefore() 方法在参考节点之前插入一个拥有指定父节点的子节点。
   // var insertedNode = parentNode.insertBefore(newNode, referenceNode);
   p.insertBefore(span, i);
+  p.appendChild(date);
   p.appendChild(b);
   //   p.insertBefore(span, item);
   // 添加到已存在的元素中
@@ -51,3 +65,10 @@ input.onkeydown = function (event) {
     addp();
   }
 };
+
+// 提示框
+let msg = document.querySelector(".msg");
+function msd() {
+  msg.style.display = "none";
+}
+setTimeout("msd()", 10000);
