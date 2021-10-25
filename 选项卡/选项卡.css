@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#tab {
+  margin-left: 30%;
+}
+.nav {
+  display: flex;
+}
+li {
+  list-style-type: none;
+  border: 1px solid silver;
+  line-height: 35px;
+  padding: 0 6px;
+}
+li.active {
+  border: 1px solid papayawhip;
+  text-decoration: double;
+  box-shadow: 2px 2px pink;
+  background-color: rgb(235, 163, 187);
+}
+#tab > div {
+  display: none;
+  border: 3px solid papayawhip;
+  background-color: rgb(235, 163, 187);
+  width: 400px;
+  height: 100px;
+  justify-content: center;
+}
+#tab div.active {
+  display: block;
+}
