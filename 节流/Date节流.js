@@ -1,0 +1,24 @@
+//节流 核心在时间间隔，可以使用setTimeout或Date对象 
+//触发事件 执行任务设置时间间隔
+//时间间隔内有触发行为就取消掉任务
+//时间间隔后有触发行为，就再次执行任务和设置时间间隔
+function coloring() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  //字符串插值是反引号包起来的
+  document.body.style.background = `rgb(${r},${g},${b})`;
+}
+//节流函数需要两个参数：执行函数，间隔时间
+function throttle(func,delay){
+    let pre=0;
+    return function(){
+        let now = new Date();
+        let context=this;
+        let arg=argument;
+        if(now-pre>delay)  {
+          func.apply(context,arg);
+          pre=now;          
+    }
+}
+window.addEventListener("resize", throttle(coloring,2000));
