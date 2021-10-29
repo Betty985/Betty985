@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>防抖函数默写</title>
+    <style>
+      input{
+    width:180px;
+    height:30px;
+    border:1px solid #666699;
+    border-radius: 8px;
+    outline: 4px double #F9999C;
+}
+    </style>
+  </head>
+  <body>
+    <input type="text" >
+    <script >
+      let inp = document.querySelector("input");
+function hi(){
+   console.log("Hello, I'm an input box！ "+inp.value);
+}
+function debounce(func,delay){
+    let timer;
+    let context=this;
+    let args=arguments;
+    //高阶函数是为了不在绑定事件的时候就执行
+    return function(){
+      clearTimeout(timer);
+       timer= setTimeout(function(){
+           hi.apply(context,arguments);
+           },delay);
+    }
+}
+inp.addEventListener("input",debounce(hi,2000));
+    </script>
+  </body>
+</html>
