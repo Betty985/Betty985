@@ -1,0 +1,13 @@
+input{
+    width:100px;
+    height:36px;
+    background: rgb(16, 214, 188);
+    color:white ;
+    border:0;
+    font-size: 21px;
+    border-radius: 8px;
+}
+:root{
+    background: rgb(58, 57, 57);
+    color:white ;
+}
