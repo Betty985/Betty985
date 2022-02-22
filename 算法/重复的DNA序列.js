@@ -26,4 +26,27 @@ var findRepeatedDnaSequences = function(s) {
 /**
 滑窗问题，可以用两个set
  */
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var findRepeatedDnaSequences = function(s) {
+   let set=new Set();
+   const result=new Set();
+//    初始指针
+   let i=0;
+   while(i<=s.length-10){
+     const dna=  s.substring(i,i+10);
+     if(set.has(dna))//可以写成（map.get(dna)===undefinded)
+     result.add(dna)
+    else{
+        set.add(dna)
+    }
+    i++
+   }
+   return Array.from(result)
+};
+/**
+滑窗问题，可以用两个set
+ */
 https://leetcode-cn.com/problems/repeated-dna-sequences/
